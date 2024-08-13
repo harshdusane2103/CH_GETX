@@ -1,6 +1,7 @@
 
-import 'package:chapter_getx_ui/CounterApp/View/Detail.dart';
-import 'package:chapter_getx_ui/CounterApp/View/Home.dart';
+import 'package:chapter_getx_ui/CRUD_App/View/Splash.dart';
+import 'package:chapter_getx_ui/CRUD_App/View/home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner:false,
       getPages: [
-        GetPage(name: '/', page: () => HomePage(),transition: Transition.rightToLeft),
-        GetPage(name: '/det', page: () => DetailScreen(),transition: Transition.rightToLeft)
+        GetPage(name: '/', page: () => SplashScreen(),transition: Transition.circularReveal),
+        GetPage(name: '/home', page: () => HomeCRUDScreen(),transition: Transition.rightToLeft),
+
       ],
     );
   }
